@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox — Все свойства</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /*  FLEX-КОНТЕЙНЕР  */
+    .flex-container {
+        display: flex;                     /* 1 display */
+        flex-direction: row;               /* 2 flex-direction */
+        flex-wrap: wrap;                   /* 3 flex-wrap */
+        flex-flow: row wrap;               /* 4 flex-flow */
+        justify-content: space-between;    /* 5 justify-content */
+        align-content: space-around;       /* 6 align-content */
+        align-items: center;               /* 7 align-items */
+        column-gap: 20px;                  /* 8 column-gap */
+        gap: 20px;                         /* 9 gap */
+        
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        min-height: 300px;
+    }
+
+    /*  FLEX-ЭЛЕМЕНТЫ  */
+    .item {
+        background: #8ec5fc;
+        background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+        padding: 20px;
+        border-radius: 8px;
+        color: #222;
+        font-weight: bold;
+        text-align: center;
+
+        flex-grow: 1;      /* 10 flex-grow */
+        flex-shrink: 1;    /* 11 flex-shrink */
+        flex-basis: 150px; /* 12 flex-basis */
+
+        /* 13 flex: grow shrink basis */
+        /* flex: 1 1 150px; */
+    }
+
+    /* Индивидуальные свойства элементов */
+    .item:nth-child(2) {
+        align-self: flex-start; /* 14 align-self */
+    }
+
+    .item:nth-child(3) {
+        order: -1; /* 15 order */
+    }
+</style>
+</head>
+<body>
+
+<h1>Flexbox — Демонстрация всех свойств</h1>
+
+<div class="flex-container">
+    <div class="item">Элемент 1</div>
+    <div class="item">Элемент 2</div>
+    <div class="item">Элемент 3</div>
+    <div class="item">Элемент 4</div>
+    <div class="item">Элемент 5</div>
+</div>
+
+</body>
+</html>
