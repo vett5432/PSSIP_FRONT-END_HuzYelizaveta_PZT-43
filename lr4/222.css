@@ -1,0 +1,107 @@
+ /* Общие параметры оформления */
+        body {
+            background-color: #d0f0c0;  /* салатовый фон */
+            font-family: Arial, sans-serif;
+            font-size: 18pt;            /* 18 пт */
+            margin: 20px;
+            line-height: 1.4;
+        }
+        /* Выравнивание для заголовка h2 */
+        h2 {
+            text-align: right;
+        }
+        /* Стиль для группы: перечеркнутый, красный */
+        .group {
+            text-decoration: line-through;
+            color: red;
+        }
+        /* Курс: курсив, выравнивание слева */
+        .course {
+            font-style: italic;
+            text-align: left;
+        }
+        /* Абзац "Мои увлечения": по центру, подчеркнутый */
+        .hobby {
+            text-align: center;
+            text-decoration: underline;
+        }
+        /* Выравнивание изображения и подписи по левому краю */
+        .image-container {
+            text-align: left;
+        }
+        figure {
+            margin: 0 0 20px 0;
+        }
+        figcaption {
+            font-size: 0.9em;
+            color: #333;
+            margin-top: 5px;
+        }
+        /* Стили для таблицы */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px 0;
+            background-color: #f9f9e0;
+        }
+        th, td {
+            border: 1px solid #2c5e2e;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #b0d9a0;
+            font-weight: bold;
+        }
+        /* Общий стиль для форм */
+        .form-block {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #888;
+            background-color: #e8f5e0;
+            border-radius: 8px;
+            max-width: 700px;
+        }
+        .form-block label {
+            display: inline-block;
+            width: 100px;
+            margin-top: 8px;
+        }
+        .form-block input, .form-block textarea {
+            font-size: 16px;
+            padding: 4px;
+            width: 250px;
+        }
+        .form-block button {
+            margin-top: 12px;
+            padding: 6px 12px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-block button:hover {
+            background-color: #45a049;
+        }
+        .portal-form {
+            background-color: #fff6df;
+            border: 1px solid #b8860b;
+        }
+        .portal-form label {
+            width: 80px;
+        }
+        .portal-links {
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+        .portal-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+        hr {
+            margin: 30px 0;
+        }
