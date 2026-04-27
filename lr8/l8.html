@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { background-color: #f0f0f0; font-family: Arial, sans-serif; padding: 20px; }
+        
+        .order-form {
+            background-color: #fffdf0;
+            width: 500px;
+            padding: 30px 40px;
+            position: relative;
+            /* Имитация рваного края */
+            clip-path: polygon(0% 0%, 95% 0%, 100% 5%, 95% 10%, 100% 15%, 95% 20%, 100% 25%, 95% 30%, 100% 35%, 95% 40%, 100% 45%, 95% 50%, 100% 55%, 95% 60%, 100% 65%, 95% 70%, 100% 75%, 95% 80%, 100% 85%, 95% 90%, 100% 95%, 95% 100%, 0% 100%);
+        }
+
+        h2 { color: #333; font-weight: normal; font-size: 20px; text-transform: uppercase; margin-bottom: 25px; }
+        h3 { color: #0088aa; font-size: 16px; margin: 20px 0; border-bottom: none; }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr 20px;
+            gap: 10px 5px;
+            align-items: center;
+        }
+
+        label { font-size: 13px; color: #444; }
+
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 4px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+
+        textarea { height: 80px; resize: none; }
+
+        .required-dot { color: #0088aa; font-size: 20px; line-height: 0; margin-left: 5px; }
+
+        .footer-info { margin-top: 20px; font-size: 12px; color: #444; }
+        .footer-info a { color: #0088aa; text-decoration: underline; }
+
+        .btn-submit {
+            margin-top: 20px;
+            padding: 5px 15px;
+            background: linear-gradient(to bottom, #fff, #e0e0e0);
+            border: 1px solid #bbb;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-form">
+    <h2>Форма заказа виртуального хостинга</h2>
+    
+    <h3>Тарифный план</h3>
+    <div class="form-grid">
+        <label>Тарифный план:</label>
+        <select><option>Optimo</option></select> <div></div>
+
+        <label>Тип клиента:</label>
+        <select><option>Физическое лицо</option></select> <div></div>
+
+        <label>Период оплаты:</label>
+        <select><option>1 год</option></select> <div></div>
+    </div>
+
+    <h3>Информация о пользователе</h3>
+    <div class="form-grid">
+        <label>ФИО:</label>
+        <input type="text" placeholder="Ваше ФИО"> <span class="required-dot">•</span>
+
+        <label>E-mail адрес:</label>
+        <input type="text" placeholder="info@timeweb.ru"> <span class="required-dot">•</span>
+
+        <label>Выбрать имя:</label>
+        <input type="text" placeholder="username"> <div></div>
+
+        <label>Ваш номер ICQ:</label>
+        <input type="text" placeholder="Ваш ICQ"> <div></div>
+
+        <label>Код партнёра (промо-код):</label>
+        <input type="text"> <div></div>
+
+        <label style="align-self: start; margin-top: 5px;">Комментарий:</label>
+        <textarea></textarea> <div></div>
+    </div>
+
+    <div class="footer-info">
+        <p><span class="required-dot">•</span> — поле обязательно для заполнения.</p>
+        <p>Для завершения процедуры регистрации необходимо принять условия <a href="#">договора оферты</a>.</p>
+        <label><input type="checkbox"> Я согласен(а) с условиями договора оферты</label>
+    </div>
+
+    <button class="btn-submit">Зарегистрироваться</button>
+</div>
+
+</body>
+</html>

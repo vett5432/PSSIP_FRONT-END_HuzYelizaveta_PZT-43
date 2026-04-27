@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .product-card {
+            display: flex;
+            max-width: 900px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            gap: 40px;
+            background: white;
+            padding: 20px;
+        }
+
+        .product-image { flex: 1; text-align: center; }
+        .product-image img { max-width: 100%; height: auto; }
+
+        .product-info { flex: 1; }
+
+        h1 { font-size: 28px; font-weight: 300; color: #333; margin-top: 0; }
+
+        .price-container { margin: 20px 0; display: flex; align-items: baseline; gap: 15px; }
+        .old-price { color: #aaa; text-decoration: line-through; font-size: 20px; }
+        .current-price { color: #333; font-size: 42px; font-weight: 400; }
+        .currency { font-size: 24px; }
+
+        .controls { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
+        
+        .quantity-wrapper {
+            display: flex;
+            border: 1px solid #ddd;
+            align-items: center;
+        }
+        .quantity-input {
+            width: 40px;
+            height: 40px;
+            border: none;
+            text-align: center;
+            border-right: 1px solid #ddd;
+        }
+        .qty-btns { display: flex; flex-direction: column; }
+        .qty-btns button {
+            border: none; background: none; cursor: pointer;
+            height: 20px; width: 20px; padding: 0; font-size: 10px;
+        }
+
+        .stock-info { color: #888; font-size: 14px; }
+
+        .actions { display: flex; gap: 15px; margin-bottom: 40px; }
+        .btn {
+            padding: 15px 30px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            flex: 1;
+        }
+        .btn-cart { background: #e60000; color: white; border: none; }
+        .btn-buy { background: white; color: #333; border: 1px solid #ccc; }
+
+        .description-title {
+            color: #bbb;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .description-text { color: #666; line-height: 1.6; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="media/rastenie.png" alt="Plant">
+    </div>
+
+    <div class="product-info">
+        <h1>Домашнее растение в горшке</h1>
+        
+        <div class="price-container">
+            <span class="old-price">2500 руб.</span>
+            <span class="current-price">1 900 <span class="currency">руб.</span></span>
+        </div>
+
+        <div class="controls">
+            <div class="quantity-wrapper">
+                <input type="text" class="quantity-input" value="1">
+                <div class="qty-btns">
+                    <button>▲</button>
+                    <button style="border-top: 1px solid #ddd">▼</button>
+                </div>
+            </div>
+            <span class="stock-info">10 в наличии</span>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-cart">В КОРЗИНУ</button>
+            <button class="btn btn-buy">КУПИТЬ СРАЗУ</button>
+        </div>
+
+        <div class="description-section">
+            <div class="description-title">ОПИСАНИЕ</div>
+            <div class="description-text">
+                Впустите в свой дом немного природной красоты с домашним вечнозеленым растением в горшке. Растение идеально подходит для офиса и дома, не требует особенного ухода и всегда радует глаз. Завести дома сад очень просто, вместе с домашним растением в горшке.
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
