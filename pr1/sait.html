@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шторбери - Салон штор в Омске</title>
+    <link rel="stylesheet" href="sait.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header debug-grid">
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger-overlay"></label>
+        
+        <div class="burger-menu-panel">
+            <label for="burger-toggle" class="burger-close">&times;</label>
+            <nav class="burger-nav">
+                <ul>
+                    <li><a href="#catalog">Каталог товаров</a></li>
+                    <li><a href="#steps">Как мы работаем</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                    <li><a href="#examples">Примеры наших работ</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#">Статьи</a></li>
+                </ul>
+            </nav>
+            <div class="burger-socials">
+                <span class="burger-icon">WA</span>
+                <span class="burger-icon">TG</span>
+            </div>
+            <div class="burger-contacts">
+                <p>Ул. 10 лет Октября 182 к.3,<br>ТЦ "Кит-Интерьер"<br>Пн-Вс 10:00-20:00</p>
+                <p>Ул.70 лет Октября 25/16в,<br>ост.Таксопарк<br>Вт-Вс 10:30-16:00; Пн выходной</p>
+            </div>
+        </div>
+
+        <div class="container header-top">
+            <div class="logo-block">
+                <img src="media/logo.png" alt="Шторбери" class="logo-img">
+                <div class="logo-text">
+                    <strong>Шторбери</strong>
+                    <span>Турецкие шторы в Омске</span>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <p>Ул. 10 лет Октября 182 к.3, ТЦ "Кит-Интерьер"</p>
+                    <small>Пн-Вс 10:00-20:00</small>
+                </div>
+                <div class="info-item">
+                    <p>Ул. 70 лет Октября 25/16в, ост. Таскопарк</p>
+                    <small>Вт-Вс 10:00-16:30</small>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="socials">
+                    <span class="icon">WA</span>
+                    <span class="icon">TG</span>
+                </div>
+                <div class="phone">
+                    <a href="tel:+79048268514" style="color: inherit; text-decoration: none;">+7 (904) 826-85-14</a>
+                </div>
+                <div class="cart">🛒 <span class="cart-count">0</span></div>
+            </div>
+
+            <label for="burger-toggle" class="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#catalog">Каталог товаров</a></li>
+                    <li><a href="#steps">Как мы работаем</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                    <li><a href="#examples">Примеры наших работ</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#">Статьи</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<section class="hero-section">
+    <div class="container">       
+        <h1 class="hero-title">Шторы под ваш интерьер <br> от 3 дней под ключ в Омске</h1>
+
+        <div class="features-white-card">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="f-icon">🚗</span>
+                    <p class="f-text">Выезд дизайнера с <br> образцами тканей</p>
+                </div>
+                <div class="feature-item">
+                    <span class="f-icon">📜</span>
+                    <p class="f-text">Турецкие ткани. <br> 90% тканей в наличии</p>
+                </div>
+                <div class="feature-item">
+                    <span class="f-icon">🧵</span>
+                    <p class="f-text">Швеи со стажем <br> более 15 лет</p>
+                </div>
+                <div class="feature-item">
+                    <span class="f-icon">🎁</span>
+                    <p class="f-text">До конца месяца акция! <br> Бесплатная развеска штор</p>
+                </div>
+            </div>
+
+            <button class="cta-button">Пригласить дизайнера</button>
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="catalog" class="catalog-section debug-grid">
+        <div class="container">
+           <h2 class="section-title" data-bg="Каталог товаров">Каталог товаров</h2>
+            <div class="catalog-grid">
+                <div class="catalog-item">
+                    <div class="item-img-box"><img src="media/cat1.png" alt="Комплекты штор"></div>
+                    <h3>Комплекты штор</h3>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-img-box"><img src="media/cat2.png" alt="Тюль"></div>
+                    <h3>Тюль</h3>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-img-box"><img src="media/cat3.png" alt="Кухонные шторы"></div>
+                    <h3>Кухонные шторы</h3>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-img-box"><img src="media/cat4.png" alt="Покрывала"></div>
+                    <h3>Покрывала</h3>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-img-box"><img src="media/cat5.png" alt="Аксессуары"></div>
+                    <h3>Аксессуары</h3>
+                </div>
+                <div class="catalog-item">
+                    <div class="item-img-box"><img src="media/cat6.png" alt="Шторы со скидкой"></div>
+                    <h3>Шторы со скидкой</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="steps" class="steps-section">
+    <div class="container">
+       <h2 class="section-title" data-bg="Как мы работаем?">Как мы работаем?</h2>
+        
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-content">
+                    <div class="step-header">
+                        <h3>Звонок или <br> заявка на сайте</h3>
+                        <span class="step-icon">📞</span>
+                    </div>
+                    <p>Вы оставляете заявку на сайте или звоните по телефону 8(904) 826-85-14, мы отвечаем на вопросы и договариваемся о встрече</p>
+                </div>
+                <span class="step-number">1</span>
+            </div>
+
+            <div class="step-card">
+                <div class="step-content">
+                    <div class="step-header">
+                        <h3>Встреча, замер <br> и выбор ткани</h3>
+                        <span class="step-icon">📏</span>
+                    </div>
+                    <p>Мы приезжаем в назначенное время, замеряем оконный блок, выбираем ткань и обсуждаем детали проекта</p>
+                </div>
+                <span class="step-number">2</span>
+            </div>
+
+            <div class="step-card">
+                <div class="step-content">
+                    <div class="step-header">
+                        <h3>Заключение <br> договора и оплата</h3>
+                        <span class="step-icon">👛</span>
+                    </div>
+                    <p>Заключаем договор, вы оплачиваете 50% стоимости заказа</p>
+                </div>
+                <span class="step-number">3</span>
+            </div>
+
+            <div class="step-card">
+                <div class="step-content">
+                    <div class="step-header">
+                        <h3>Пошив штор и <br> доставка</h3>
+                        <span class="step-icon">📦</span>
+                    </div>
+                    <p>Мы приступаем к пошиву штор. Средний срок изготовления 5 дней</p>
+                </div>
+                <span class="step-number">4</span>
+            </div>
+
+            <div class="step-card">
+                <div class="step-content">
+                    <div class="step-header">
+                        <h3>Хорошее настроение <br> и уют в доме</h3>
+                        <span class="step-icon">😊</span>
+                    </div>
+                    <p>Мы доставляем шторы, помогаем развешать и правильно оформить. Вы наслаждаетесь результатом</p>
+                </div>
+                <span class="step-number">5</span>
+            </div>
+
+            <div class="step-card cta-card">
+                <h3>К чему долго ждать?</h3>
+                <p>Жмите на кнопку и заказывайте бесплатный выезд дизайнера прямо сейчас!</p>
+                <button class="cta-button-small">Пригласить дизайнера</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="examples" class="work-examples">
+    <div class="container">
+        <h2 class="section-title" data-bg="Примеры наших работ">Примеры наших работ</h2>
+        
+        <div class="example-card">
+            <div class="example-grid">
+                
+                <div class="example-info">
+                    <div class="info-block">
+                        <span class="label">Проблема</span>
+                        <p>Во время ремонта убрали стену, чтобы кухню и зал сделать единым пространством. На кухне свой стиль — бирюзовый кухонный гарнитур, а гостиная в классическом стиле с обоями под штукатурку. Вид окон на набережную и в обед мешает солнце...</p>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="label">Решение</span>
+                        <p>Мы подобрали бархат - он подходит по высоте, отлично затеняет от солнца. Цвет подобрали универсальный, чтобы и к кухонному гарнитуру подходил и к обоям - серо-бежевый цвет. Тюль подобрали однотонный...</p>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="label">Результат</span>
+                        <p>Комната выглядит уютно и нарядно. Скрыли трубы, которые шли по стене. При закрытии окна портьерами в комнате становится достаточно темно, чтобы солнце не мешало.</p>
+                    </div>
+
+                    <div class="case-details">
+                        <div class="detail-item">
+                            <span>От замера до навески</span>
+                            <span class="dots"></span>
+                            <span>5 дней</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Цена</span>
+                            <span class="dots"></span>
+                            <span>34 900 руб</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-wrapper">
+                        <button class="cta-button">Оставить заявку</button>
+                        <p class="cta-subtext">На выезд дизайнера*</p>
+                    </div>
+                </div>
+
+                <div class="example-gallery">
+                    <div class="gallery-top">
+                        <img src="media/lr1.png" alt="Интерьер гостиной 1" class="gallery-img">
+                        <img src="media/lr2.png" alt="Интерьер гостиной 2" class="gallery-img">
+                        <img src="media/lr3.png" alt="Вид на кухню" class="gallery-img">
+                        <img src="media/lr4.png" alt="Зона с елкой" class="gallery-img">
+                    </div>
+                    <div class="gallery-bottom">
+                        <div class="video-placeholder">
+                            <img src="media/lr5.png" alt="Общий вид" class="gallery-img">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <span class="case-number">1</span>
+        </div>
+    </div>
+</section>
+
+
+<section id="portfolio" class="photoblog-section">
+    <div class="container">
+        <h2 class="section-title" data-bg="Видеоблог">Видеоблог</h2>
+        
+        <div class="photo-grid">
+            <div class="photo-card">
+                <div class="image-wrapper">
+                    <img src="media/v1.png" alt="Обзор штор в кабинете">
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <div class="image-wrapper">
+                    <img src="media/v2.png" alt="Обзор кухни">
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <div class="image-wrapper">
+                    <img src="media/v3.png" alt="Обзор шкафа и штор">
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <div class="image-wrapper">
+                    <img src="media/v4.png" alt="Отзыв клиента">
+                </div>
+            </div>
+        </div>
+
+        <div class="centered-cta">
+            <button class="cta-button-outline">Смотреть все video на YouTube</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="request-section">
+    <div class="container">
+        <h2 class="section-title" data-bg="Заявка на выезд дизайнера">Заявка на выезд дизайнера</h2>
+        <p class="request-subtitle">Стоимость услуги 500 рублей, но при заказе штор бесплатный</p>
+        
+        <form class="request-form">
+            <div class="form-grid">
+                <input type="text" class="form-input" placeholder="Введите имя" required>
+                <input type="tel" class="form-input" placeholder="Ваш номер телефона" required>
+                <button type="submit" class="form-button">Пригласить дизайнера</button>
+            </div>
+            
+            <div class="form-footer">
+                <label class="checkbox-container">
+                    <input type="checkbox" checked required>
+                    <span class="checkmark"></span>
+                    Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
+                </label>
+                <p class="callback-note">Перезвоним в течение 5 минут</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section id="team" class="team-section">
+    <div class="container">
+        <h2 class="section-title" data-bg="Наш коллектив">Наш коллектив</h2>
+        
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="photo-wrapper empty">
+                    <img src="media/marina.jpg" alt="Марина">
+                </div>
+                <h3 class="member-name">Марина</h3>
+                <p class="member-role">Директор, дизайнер, швея</p>
+            </div>
+            <div class="team-card">
+                <div class="photo-wrapper">
+                    <img src="media/anjelica.jpg" alt="Анжелика">
+                </div>
+                <h3 class="member-name">Анжелика</h3>
+                <p class="member-role">Продавец-консультант, дизайнер</p>
+            </div>
+            <div class="team-card">
+                <div class="photo-wrapper">
+                    <img src="media/olga.jpg" alt="Ольга">
+                </div>
+                <h3 class="member-name">Ольга</h3>
+                <p class="member-role">Инженер технолог, швея</p>
+            </div>
+            <div class="team-card">
+                <div class="photo-wrapper">
+                    <img src="media/igor.jpg" alt="Игорь">
+                </div>
+                <h3 class="member-name">Игорь</h3>
+                <p class="member-role">Замерщик, монтаж карнизов</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="reviews-section">
+    <div class="container">
+        <h2 class="section-title" data-bg="Отзывы">Отзывы</h2>
+        
+        <div class="slider-container">
+            <button class="slider-arrow prev"></button>
+            
+            <div class="reviews-flex">
+                <div class="phone-mockup">
+                    <img src="media/iph1.png" alt="Отзыв 1">
+                </div>
+                <div class="phone-mockup">
+                    <img src="media/iph2.png" alt="Отзыв 2">
+                </div>
+                <div class="phone-mockup">
+                    <img src="media/iph3.png" alt="Отзыв 3">
+                </div>
+            </div>
+            
+            <button class="slider-arrow next"></button>
+        </div>
+        
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+
+<section class="social-section">
+    <div class="social-card">
+        <h2 class="section-title" data-bg="Мы в социальных сетях">Мы в социальных сетях</h2>
+        <p class="instagram-label">Наш Инстаграмм</p>
+
+        <div class="instagram-grid">
+            <div class="insta-item"><img src="media/w1.jpg" alt="Интерьер 1"></div>
+            <div class="insta-item"><img src="media/w2.jpg" alt="Интерьер 2"></div>
+            <div class="insta-item"><img src="media/w3.jpg" alt="Интерьер 3"></div>
+            <div class="insta-item"><img src="media/w4.jpg" alt="Интерьер 4"></div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com" target="_blank" class="social-item">
+                <div class="icon-circle img">
+                    <img src="media/yout.png" alt="YouTube">
+                </div>
+                <p>Посмотрите более <b>400</b> видеообзоров наших штор</p>
+            </a>
+            
+            <a href="https://vk.com" target="_blank" class="social-item">
+                <div class="icon-circle img">
+                    <img src="media/VK.png" alt="ВКонтакте">
+                </div>
+                <p>Посетите нашу группу в <b>Вконтакте</b></p>
+            </a>
+
+            <a href="https://ok.ru" target="_blank" class="social-item">
+                <div class="icon-circle img">
+                    <img src="media/odn.png" alt="Одноклассники">
+                </div>
+                <p>Посетите нашу группу в <b>Одноклассниках</b></p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contacts" class="contacts-section">
+    <div class="container">
+        <h2 class="section-title" data-bg="Где мы находимся?">Где мы находимся?</h2>
+        
+        <div class="map-container">
+            <div class="map-placeholder"></div>
+        </div>
+
+        <div class="locations-grid">
+            <div class="location-item">
+                <p class="address">г. Омск, 10 лет Октября, 182 к.3 ТЦ "Кит-Интерьер"<br>1 этаж, левое крыло</p>
+                <p class="work-hours">Понедельник – воскресенье с 10:00 до 20:00</p>
+                <div class="location-photo">
+                    <img src="media/hz1.jpg" alt="Салон в Кит-Интерьер">
+                </div>
+            </div>
+
+            <div class="location-item">
+                <p class="address">г. Омск, 70 лет Октября 25/16в, "Торговый Город"<br>Ряд: 43, Место: 83</p>
+                <p class="work-hours">Вторник – воскресенье: с 10:00 до 16:30 без обеда,<br>понедельник: выходной</p>
+                <div class="location-photo">
+                    <img src="media/hz2.png" alt="Салон в Торговом Городе">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">
+            <img src="media/logo.png" alt="Шторвери">
+            <p>Шторбери<br><span>Турецкие шторы в Омске</span></p>
+        </div>
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#team">Наша команда</a></li>
+                <li><a href="#examples">Примеры наших работ</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#catalog">Каталог товаров</a></li>
+                <li><a href="#steps">Как мы работаем</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#">Статьи</a></li>
+            </ul>
+        </nav>
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Политика безопасности</a></li>
+                <li><a href="#">Обмен и возврат товара</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-contacts">
+            <p>Ул. 10 лет Октября 182 к.3,<br>ТЦ "Кит-Интерьер"<br>Пн-Вс 10:00-20:00</p>
+            <p>Ул.70 лет Октября 25/16в,<br>ост.Таксопарк<br>Вт-Вс 10:30-16:00<br>Пн выходной</p>
+            <p class="phone">
+                <a href="tel:+79048268514" style="color: inherit; text-decoration: none;">+7 (904) 826-85-14</a>
+            </p>
+        </div>
+
+        <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" class="social-icon">ig</a>
+            <a href="https://ok.ru" target="_blank" class="social-icon">ok</a>
+            <a href="https://vk.com" target="_blank" class="social-icon">vk</a>
+            <a href="https://youtube.com" target="_blank" class="social-icon">yt</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /* Скрипт автоматического закрытия бургер-меню после клика по ссылке */
+    document.querySelectorAll('.burger-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('burger-toggle').checked = false;
+        });
+    });
+</script>
+</body>
+</html>
