@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тематический контроль знаний — Вариант №35</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script>
+        function showDateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const year = now.getFullYear();
+            alert(`Текущее время: ${hours}:${minutes}\nТекущий год: ${year}`);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Тематический контроль знаний </h1>
+        <p class="subtitle">Вариант №35 | Студентка: Гуз Елизавета</p>
+
+        <section class="task-card">
+            <h2>Задание 1: Работа с объектом Date</h2>
+            <div class="task-desc">Вывести в диалоговое окно текущий час / год при нажатии на кнопку.</div>
+            <div class="task-output">
+                <button onclick="showDateTime()">Показать год</button>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задание 2: Работа с операторами циклов (for)</h2>
+            <div class="task-desc">Вывод Фамилии и Имени n+5 раз (35 + 5 = 40 раз).</div>
+            <div class="task-output" id="task2-output">
+                <script>
+                    const name = "Гуз Елизавета";
+                    const repetitions = 35 + 5;
+                    let task2Result = "";
+                    for (let i = 1; i <= repetitions; i++) {
+                        task2Result += `${i}. ${name}<br>`;
+                    }
+                    document.write(task2Result);
+                </script>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задание 3: Работа с объектом Array</h2>
+            <div class="task-desc">Массив из 8 элементов. Произведение нечетных элементов. Переворот массива. </div>
+            <div class="task-output">
+                <script>
+                    const originalArray = [3, 4, 7, 2, 5, 8, 9, 6];
+                    let productOfOdds = 1;
+                    let hasOdds = false;
+                    for (let i = 0; i < originalArray.length; i++) {
+                        if (originalArray[i] % 2 !== 0) {
+                            productOfOdds *= originalArray[i];
+                            hasOdds = true;
+                        }
+                    }
+                    const resultProduct = hasOdds ? productOfOdds : 0;
+                    const reversedArray = [...originalArray].reverse();
+
+                    document.write(`<b>Исходный массив:</b> [${originalArray.join(', ')}]<br>`);
+                    document.write(`<b>Произведение нечетных элементов:</b> ${resultProduct}<br>`);
+                    document.write(`<b>Перевернутый массив:</b> [${reversedArray.join(', ')}]<br>`);
+                </script>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задание 4: Работа с объектом Math</h2>
+            <div class="task-desc">Расчет по формуле |y| = (x - 2) / (x - 1). Вызов функции из внешнего файла.</div>
+            <div class="task-output">
+                <script>
+                    const xValue = 3; // Измените это значение для проверки исключений (например, 1 или 1.5)
+                    document.write(`<b>Заданное значение x:</b> ${xValue}<br>`);
+                    
+                    // Вызов пользовательской функции из внешнего файла script.js
+                    const mathResult = calculateY(xValue);
+
+                    if (mathResult !== null) {
+                        if (mathResult.y1 === mathResult.y2) {
+                            document.write(`<b>Результат:</b> y = ${mathResult.y1}<br>`);
+                        } else {
+                            document.write(`<b>Результаты:</b> y₁ = ${mathResult.y1}; y₂ = ${mathResult.y2}<br>`);
+                        }
+                    } else {
+                        document.write(`<span class="error">Ошибка вычислений. Подробности в alert().</span><br>`);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задание 5: Работа со строками STRING</h2>
+            <div class="task-desc">Операции со строками S1 (ФАМИЛИЯ) и S2 (АДРЕС). Любой способ внедрения.</div>
+            <div class="task-output">
+                <script>
+                    const S1 = "Гуз";
+                    const S2 = "ул. Советская, д. 10";
+                    const lengthS2 = S2.length;
+                    const concatenated = S1 + " " + S2;
+                    const lowerS2 = S2.toLowerCase();
+
+                    document.write(`<b>Строка S1:</b> ${S1}<br>`);
+                    document.write(`<b>Строка S2:</b> ${S2}<br>`);
+                    document.write(`<b>1. Длина строки S2:</b> ${lengthS2} символов<br>`);
+                    document.write(`<b>2. Сцепление строк (S1 + S2):</b> ${concatenated}<br>`);
+                    document.write(`<b>3. Строка S2 в нижнем регистре:</b> ${lowerS2}<br>`);
+                </script>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
