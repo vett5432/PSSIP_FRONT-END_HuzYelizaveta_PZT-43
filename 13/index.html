@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР №13 BOM</title>
+</head>
+<body>
+
+<h1>Лабораторная работа №13</h1>
+
+<!-- 1. Межоконное взаимодействие -->
+<h2>1. Window — работа с окнами</h2>
+
+<button onclick="openWin()">Открыть окно</button>
+<button onclick="sendData()">Передать данные</button>
+<button onclick="closeWin()">Закрыть окно</button>
+
+<p id="answer"></p>
+
+<script>
+let win;
+
+function openWin() {
+    win = window.open("", "", "width=400,height=300");
+    win.document.write(`
+        <h2>Дочернее окно</h2>
+        <p id="data">Данных пока нет</p>
+        <button onclick="window.opener.getAnswer('Ответ получен!')">
+            Отправить ответ
+        </button>
+    `);
+}
+
+function sendData() {
+    win.document.getElementById("data").innerHTML = "Привет из главного окна!";
+}
+
+function closeWin() {
+    if (win) win.close();
+}
+
+function getAnswer(text) {
+    document.getElementById("answer").innerHTML = text;
+}
+</script>
+
+
+<!-- 2. Navigator -->
+<h2>2. Информация о браузере и системе</h2>
+
+<div id="info"></div>
+
+<script>
+document.getElementById("info").innerHTML =
+    "Браузер: " + navigator.userAgent + "<br>" +
+    "Язык: " + navigator.language + "<br>" +
+    "Экран: " + screen.width + " × " + screen.height + "<br>" +
+    "Доступная область: " + screen.availWidth + " × " + screen.availHeight;
+</script>
+
+
+<!-- 3. Window + таймер -->
+<h2>3. Управление окном и таймер</h2>
+
+<button onclick="location.href='https://mail.google.com/'">
+    Перейти на сайт
+</button>
+
+<button onclick="location.reload()">
+    Обновить страницу
+</button>
+
+<p>Время работы страницы: <span id="time">0</span> сек.</p>
+
+<script>
+let time = 0;
+
+setInterval(function() {
+    time++;
+    document.getElementById("time").innerHTML = time;
+}, 1000);
+</script>
+
+
+<!-- 4. History -->
+<h2>4. История</h2>
+
+<button onclick="history.back()">Назад</button>
+<button onclick="history.forward()">Вперед</button>
+
+<p id="page">Страница 1</p>
+
+<button onclick="page2()">Страница 2</button>
+<button onclick="page3()">Страница 3</button>
+
+<script>
+function page2() {
+    history.pushState({}, "", "?page=2");
+    document.getElementById("page").innerHTML = "Страница 2";
+}
+
+function page3() {
+    history.pushState({}, "", "?page=3");
+    document.getElementById("page").innerHTML = "Страница 3";
+}
+</script>
+
+
+<!-- 5. Screen -->
+<h2>5. Характеристики экрана</h2>
+<table border="1">
+    <tr>
+        <th>Параметр</th>
+        <th>Значение</th>
+    </tr>
+    <tr>
+        <td>Ширина</td>
+        <td id="w"></td>
+    </tr>
+    <tr>
+        <td>Высота</td>
+        <td id="h"></td>
+    </tr>
+    <tr>
+        <td>Доступная ширина</td>
+        <td id="aw"></td>
+    </tr>
+    <tr>
+        <td>Доступная высота</td>
+        <td id="ah"></td>
+    </tr>
+    <tr>
+        <td>Глубина цвета</td>
+        <td id="color"></td>
+    </tr>
+    <tr>
+        <td>Глубина пикселя</td>
+        <td id="pixel"></td>
+    </tr>
+</table>
+
+<script>
+w.innerHTML = screen.width + " px";
+h.innerHTML = screen.height + " px";
+aw.innerHTML = screen.availWidth + " px";
+ah.innerHTML = screen.availHeight + " px";
+color.innerHTML = screen.colorDepth + " бит";
+pixel.innerHTML = screen.pixelDepth + " бит";
+</script>
+
+
+<!-- 6. Тип устройства -->
+<h2>6. Определение устройства</h2>
+
+<p id="device"></p>
+
+<script>
+let width = screen.width;
+let ua = navigator.userAgent.toLowerCase();
+
+if (width < 768 || ua.includes("mobile")) {
+    device.innerHTML = "Телефон";
+} else if (width < 1024 || ua.includes("tablet")) {
+    device.innerHTML = "Планшет";
+} else {
+    device.innerHTML = "Компьютер";
+}
+</script>
+
+
+<!-- 7. GET-параметры -->
+<h2>7. Каталог с параметром поиска</h2>
+
+<p id="catalog"></p>
+
+<script>
+let params = new URLSearchParams(location.search);
+let category = params.get("category");
+
+if (category == "book") {
+    catalog.innerHTML = "Товары: Учебник, Роман, Энциклопедия";
+} else if (category == "phone") {
+    catalog.innerHTML = "Товары: iPhone, Samsung, Xiaomi";
+} else {
+    catalog.innerHTML = "Выберите категорию: ?category=book или ?category=phone";
+}
+</script>
+
+</body>
+</html>
