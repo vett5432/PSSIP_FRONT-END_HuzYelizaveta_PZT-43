@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ЛР №14 DOM</title>
+</head>
+<body>
+
+<h1>Лабораторная работа №14</h1>
+<h2>Объектная модель документа DOM</h2>
+
+<!-- 1. Поиск и изменение текста -->
+<h2>1. Поиск элементов и изменение текста</h2>
+
+<h3>Пример 1. getElementById()</h3>
+<p id="text">Старый текст</p>
+<button onclick="changeText()">Изменить текст</button>
+
+<script>
+function changeText() {
+    // Поиск элемента и изменение текста
+    document.getElementById("text").textContent = "Текст изменён через DOM!";
+}
+</script>
+
+<!-- 2. Поиск элементов -->
+<h2>2. Поиск элементов</h2>
+
+<h3>Пример 1. querySelector()</h3>
+<p class="example">Первый элемент</p>
+<button onclick="findElement()">Найти элемент</button>
+<p id="findResult"></p>
+
+<script>
+function findElement() {
+    // Находим первый элемент по селектору
+    let element = document.querySelector(".example");
+    document.getElementById("findResult").textContent = "Найден: " + element.textContent;
+}
+</script>
+
+<h3>Пример 2. querySelectorAll()</h3>
+<p class="item">Элемент 1</p>
+<p class="item">Элемент 2</p>
+<p class="item">Элемент 3</p>
+<button onclick="findElements()">Найти все</button>
+<p id="allResult"></p>
+
+<script>
+function findElements() {
+    // Находим все элементы с классом item
+    let elements = document.querySelectorAll(".item");
+    document.getElementById("allResult").textContent = "Найдено: " + elements.length;
+}
+</script>
+
+<!-- 3. Создание элемента -->
+<h2>3. Создание и добавление элементов</h2>
+
+<h3>Пример 1. createElement()</h3>
+<button onclick="createElementExample()">Создать элемент</button>
+<div id="container"></div>
+
+<script>
+function createElementExample() {
+    // Создаём новый элемент
+    let newElement = document.createElement("p");
+    newElement.textContent = "Новый элемент создан через DOM";
+    document.getElementById("container").appendChild(newElement);
+}
+</script>
+
+<!-- 4. Удаление -->
+<h2>4. Удаление элементов</h2>
+
+<h3>Пример 1. remove()</h3>
+<p id="deleteText">Этот текст можно удалить.</p>
+<button onclick="deleteElement()">Удалить</button>
+
+<script>
+function deleteElement() {
+    // Удаляем найденный элемент
+    document.getElementById("deleteText").remove();
+}
+</script>
+
+<!-- 5. Замена -->
+<h2>5. Замена элементов</h2>
+
+<h3>Пример 1. replaceWith()</h3>
+<p id="oldElement">Старый элемент</p>
+<button onclick="replaceElement()">Заменить</button>
+
+<script>
+function replaceElement() {
+    // Создаём новый элемент и заменяем старый
+    let newElement = document.createElement("p");
+    newElement.textContent = "Новый элемент";
+    document.getElementById("oldElement").replaceWith(newElement);
+}
+</script>
+
+<!-- 6. Атрибуты -->
+<h2>6. Управление атрибутами</h2>
+
+<h3>Пример 1. setAttribute()</h3>
+<a id="link" href="https://google.com" target="_blank">Открыть сайт</a>
+<br><br>
+<button onclick="changeLink()">Изменить ссылку</button>
+
+<script>
+function changeLink() {
+    // Меняем значение атрибута href
+    document.getElementById("link").setAttribute("href", "https://example.com");
+}
+</script>
+
+<!-- 7. Стили -->
+<h2>7. Изменение стиля элементов</h2>
+
+<h3>Пример 1. Изменение цвета</h3>
+<p id="colorText">Цвет этого текста можно изменить.</p>
+<button onclick="changeColor()">Изменить цвет</button>
+
+<script>
+function changeColor() {
+    // Меняем цвет через style
+    document.getElementById("colorText").style.color = "red";
+}
+</script>
+
+<h3>Пример 2. Изменение размера</h3>
+<p id="sizeText">Размер этого текста можно изменить.</p>
+<button onclick="changeSize()">Увеличить</button>
+
+<script>
+function changeSize() {
+    // Меняем размер текста
+    document.getElementById("sizeText").style.fontSize = "30px";
+}
+</script>
+
+<h3>Пример 3. Изменение нескольких стилей</h3>
+<p id="styleText">Здесь изменится стиль.</p>
+<button onclick="changeStyle()">Изменить стиль</button>
+
+<script>
+function changeStyle() {
+    // Меняем несколько CSS-свойств
+    let element = document.getElementById("styleText");
+    element.style.color = "blue";
+    element.style.backgroundColor = "yellow";
+    element.style.fontSize = "25px";
+}
+</script>
+
+<!-- 8. Навигация по DOM -->
+<h2>8. Навигация по DOM-дереву</h2>
+
+<h3>Пример 1. Родительский элемент</h3>
+<div id="parent">
+    <p id="child">Дочерний элемент</p>
+</div>
+<button onclick="showParent()">Найти родителя</button>
+<p id="parentResult"></p>
+
+<script>
+function showParent() {
+    // Получаем родительский элемент
+    let child = document.getElementById("child");
+    document.getElementById("parentResult").textContent = child.parentElement.tagName;
+}
+</script>
+
+<h3>Пример 2. Дочерние элементы</h3>
+<div id="children">
+    <p>Первый</p>
+    <p>Второй</p>
+    <p>Третий</p>
+</div>
+<button onclick="showChildren()">Показать количество</button>
+<p id="childrenResult"></p>
+
+<script>
+function showChildren() {
+    // Получаем количество дочерних элементов
+    let parent = document.getElementById("children");
+    document.getElementById("childrenResult").textContent = parent.children.length;
+}
+</script>
+
+<h3>Пример 3. Следующий элемент</h3>
+<div>
+    <p id="first">Первый элемент</p>
+    <p id="second">Второй элемент</p>
+</div>
+<button onclick="showNext()">Найти следующий</button>
+<p id="nextResult"></p>
+
+<script>
+function showNext() {
+    // Получаем следующий соседний элемент
+    let first = document.getElementById("first");
+    document.getElementById("nextResult").textContent = first.nextElementSibling.textContent;
+}
+</script>
+
+<!-- 9. События -->
+<h2>9. Реакция на действия пользователя</h2>
+
+<h3>Пример 1. Событие click</h3>
+<button id="eventButton">Нажмите на кнопку</button>
+<p id="eventResult"></p>
+
+<script>
+// Добавляем обработчик события
+document.getElementById("eventButton").addEventListener("click", function() {
+    document.getElementById("eventResult").textContent = "Кнопка нажата!";
+});
+</script>
+
+<!-- 10. Document -->
+<h2>10. Свойства объекта document</h2>
+
+<h3>Пример 1. document.title</h3>
+<button onclick="showTitle()">Показать title</button>
+<p id="titleResult"></p>
+
+<script>
+function showTitle() {
+    // Получаем заголовок документа
+    document.getElementById("titleResult").textContent = document.title;
+}
+</script>
+
+<h3>Пример 2. document.links</h3>
+<a href="https://google.com">Google</a>
+<br>
+<a href="https://example.com">Example</a>
+<br><br>
+<button onclick="countLinks()">Посчитать ссылки</button>
+<p id="linksResult"></p>
+
+<script>
+function countLinks() {
+    // Получаем количество ссылок
+    document.getElementById("linksResult").textContent = "Ссылок: " + document.links.length;
+}
+</script>
+
+<!-- 11. innerHTML -->
+<h2>11. Изменение HTML-содержимого</h2>
+
+<h3>Пример 1. innerHTML</h3>
+<div id="htmlBlock">Старое содержимое</div>
+<button onclick="changeHTML()">Изменить HTML</button>
+
+<script>
+function changeHTML() {
+    // Меняем HTML внутри элемента
+    document.getElementById("htmlBlock").innerHTML = "<b>Новое содержимое</b>";
+}
+</script>
+
+</body>
+</html>
+
